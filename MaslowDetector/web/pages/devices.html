@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">  
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js"></script> 
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+		
+	   
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">    
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    
+	<link rel="stylesheet" type="text/css" href="../css/custom.css">
+	<link rel="stylesheet" type="text/css" href="../css/devices.css">
+        
+	<style type="text/css">  </style>
+	<title>SEMOLA project - ECG analysis</title>
+	<link rel="icon" href="../img/favicon.png">
+   </head>
+     
+    <body> 
+	
+            <div id="cabecera">
+                <div class="logo_title"><img id = "etsit" src="../img/etsit_wt.gif"></div>
+                <div id="logo_right" class="logo_title"><img id = "upm" src="../img/upm_wt.gif"></div>
+            </div>
+		
+            <h1>	
+                    SEMOLA PROJECT		
+            </h1>
+            <h2>ELECTROCARDIOGRAM ANALYSIS</h2>
+        <div id="contenido">
+            <p> <strong>TEXTUAL RESULTS</strong> </p>
+	    <div id="result"></div>
+            <div id="graficas">
+                <p id="datosCrudo" class="tracking"> <strong>RAW ECG</strong> </p>
+		<div><canvas id="canvasCrudo" height="150" width="450"></canvas></div>
+                <p id="datosLF" class="tracking"> <strong>LF SIGNAL</strong> </p>
+		<div><canvas id="canvasLF" height="150" width="450"></canvas></div>
+                <p id="datosCF" class="tracking"> <strong>CF SIGNAL</strong> </p>
+		<div><canvas id="canvasCF" height="150" width="450"></canvas></div>
+                <p id="datosMF" class="tracking"> <strong>MF SIGNAL</strong> </p>
+		<div><canvas id="canvasMF" height="150" width="450"></canvas></div>
+                <p id="datosRF" class="tracking"> <strong>RF SIGNAL</strong> </p>
+		<div><canvas id="canvasRF" height="150" width="450"></canvas></div>                
+            </div>
+            <div id="tabla">			  
+                <table>
+                        <tr>
+                               <th><strong>Beats per minute (BPM)</strong></th>
+                               <th><strong>Pulsations per minute (PPM)</strong></th>
+                        </tr>
+                        <tr>
+                               <th id ="bpm"></th>
+                               <th id = "ppm"></th>
+                        </tr>							  
+                 </table>
+            </div>
+            <div class="footer">
+                    <p>
+                        <strong>FUNDING</strong>
+                         <br/>
+                         This application has been partially funded by the Ministry of Economy and Competitiveness through SEMOLA project (TEC2015-68284-R)
+                  </p>
+                  <img class="logo_footer" id="logo_semola" src="../img/semola_logo.jpg">
+                  <img class="logo_footer" id="logo_economia" src="../img/economia.jpg">
+            </div>
+        </div>
+	<script type="text/javascript" src="../js/devices.js"></script>	
+	</body>
+</html>
+  

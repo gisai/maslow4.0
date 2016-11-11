@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">  
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js"></script> 
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+		
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>    
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">    
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    
+	<script type="text/javascript" src="https://download.affectiva.com/js/3.1/affdex.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	
+    <style type="text/css">  </style>
+	<title>SEMOLA project - Emotions recognition</title>
+	<link rel="icon" href="img/favicon.png">
+   </head>
+     
+    <body> 
+	<div id="content">
+	<div id="cabecera">
+	<div class="logo_title"><img id = "etsit" src="img/etsit_wt.gif"></div>
+	<div id="logo_right" class="logo_title"><img id = "upm" src="img/upm_wt.gif"></div>
+	</div>
+		
+		
+	<h1>	
+		SEMOLA PROJECT		
+	</h1>
+	<h2>EMOTION RECOGNITION FROM VIDEO STREAM</h2>
+		<div class="container-fluid">
+			<div class="row">
+			  <div class="col-md-8" id="affdex_elements" style="width:680px;height:480px;"></div>
+			  <div class="col-md-4">
+				<div style="height:25em;">
+				  <strong>TEXTUAL SUMMARY OF THE RESULTS</strong>
+				  <div id="results" style="word-wrap:break-word;"></div>
+				</div>
+				<div>
+				  <strong>DETECTOR LOG MSGS</strong>
+				</div>
+				<div id="logs"></div>
+			  </div>
+			</div>
+			<div>
+			  <button id="start" onclick="onStart()">Start</button>
+			  <button id="stop" onclick="onStop()">Stop</button>
+			  <button id="reset" onclick="onReset()">Reset</button>
+			  <div id="completeResults">
+				  <p> <strong>APPEARANCE RESULTS</strong> </p>
+				  <div id="tabla">			  
+					  <table>
+						  <tr>
+							 <th><strong>Face number</strong></th>
+							 <th><strong>Gender</strong></th>
+							 <th><strong>Glasses</strong></th>
+							 <th><strong>Age</strong></th>
+							 <th><strong>Ethnicity</strong></th>
+						  </tr>
+						  <tr>
+							 <th id ="idNumber"></th>
+							 <th id = "idGender"></th>
+							 <th id = "idGlasses"></th>
+							 <th id = "idAge"></th>
+							 <th id = "idEthnicity"></th>
+						  </tr>							  
+					   </table>
+				  </div>			   
+				  <p id="emotionTracking" class="tracking"> <strong>EMOTION TRACKING RESULTS</strong> </p>
+				  <div><canvas id="canvasEmotions" height="150" width="450"></canvas></div>
+				  <p id="emojiTracking" class="tracking"> <strong>EMOJI TRACKING RESULTS</strong> </p>
+				  <div><canvas id="canvasEmojis" height="150" width="450"></canvas></div>
+				  
+				  <table id = "tableEmoji">
+					<tr>
+						<th class="emojiContainer"> <img class="emoji" src="img/emojis/relaxed.png"> </th>
+						<th class="emojiContainer"> <img class="emoji" src="img/emojis/smiley.png"> </th>
+						<th class="emojiContainer"> <img class="emoji" src="img/emojis/laughing.png"> </th>
+						<th class="emojiContainer"> <img class="emoji" src="img/emojis/kissing.png"> </th>
+						<th class="emojiContainer"> <img class="emoji" src="img/emojis/disappointed.png"> </th>
+						<th class="emojiContainer"> <img class="emoji" src="img/emojis/rage.png"> </th>
+						<th class="emojiContainer"> <img class="emoji" src="img/emojis/smirk.png"> </th>
+						<th class="emojiContainer"> <img class="emoji" src="img/emojis/wink.png"> </th>
+						<th class="emojiContainer"> <img class="emoji" src="img/emojis/stuckOutTongueWinkingEye.png"> </th>
+						<th class="emojiContainer"> <img class="emoji" src="img/emojis/stuckOutTongue.png"> </th>
+						<th class="emojiContainer"> <img class="emoji" src="img/emojis/flushed.png"> </th>
+						<th class="emojiContainer"> <img class="emoji" src="img/emojis/scream.png"> </th>
+					</tr>
+				  </table>
+				  
+				  <p id="expressionTracking" class="tracking"> <strong>EXPRESSION TRACKING RESULTS</strong> </p>
+				  <div><canvas id="canvasExpressions" height="150" width="450"></canvas></div>
+				  
+			  </div>			  
+			   <p class="footer">
+				    <strong>POWERED BY</strong>
+				    <br/>
+				     Affectiva face recognition software and emotion tracking API (Affex)
+		        </p>
+		        <img class="logo_footer" id="logo_affectiva" src="img/affectiva.jpg">
+		        <p>
+				      <strong>FUNDING</strong>
+				       <br/>
+				       This application has been partially funded by the Ministry of Economy and Competitiveness through SEMOLA project (TEC2015-68284-R)
+			    </p>
+			    <img class="logo_footer" id="logo_semola" src="img/semola_logo.jpg">
+			    <img class="logo_footer" id="logo_economia" src="img/economia.jpg">
+			</div>
+		</div>
+		
+		
+		</div>
+	</body>	
+	<script type="text/javascript" src="js/chart.js"></script>  
+	<script type="text/javascript" src="js/affectiva.js"></script> 
+</html>
+  

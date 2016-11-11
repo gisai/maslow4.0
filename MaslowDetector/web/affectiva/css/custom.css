@@ -1,0 +1,84 @@
+/*
+* Archivo de estilo para la página web de
+* SEMOLA
+*/
+
+h1, h2 {
+	text-align: center;    
+	color: #FFFFFF;
+	font-family: "Comic Sans MS";
+}
+
+h2 {
+	padding-bottom: 10px;
+}
+
+body {
+	background: #1F618D;
+	color: #FFFFFF;
+}
+
+#etsit, #upm {
+	height: 100px;
+}
+
+#logo_right {
+	text-align: right;
+	margin-top: -100px;
+}
+
+#affdex_elements {
+	border: 1px #FFFFFF solid;
+}
+
+#content {
+	margin: 10px;
+}
+
+#completeResults, .tracking {
+    margin-top: 60px;
+}
+
+.emoji {
+	width:45px;		
+}
+
+.emojiContainer {
+	width: 750px;
+	background-color: #1F618D;
+}
+
+.footer {
+	margin-top: 70px;
+}
+
+table, th, td, tr {
+	border: 2px solid #1F618D;
+	background-color: #33cccc;
+	padding: 10px 20px;
+	margin: 4px 2px;
+}
+
+#tableEmoji, #tableEmoji.tr {
+	background-color: #1F618D;
+	margin-left: 50px;
+	text-align: center;
+}
+
+button {
+	border: none;
+	text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	background-color: #33cccc;
+	padding: 10px 20px;
+	margin: 4px 2px;
+	font-weight: bold;
+	font-family: "Comic Sans MS";
+	font-size: 16px;
+}
+
+#logo_semola, #logo_affectiva  {
+	height: 80px;
+}
+
